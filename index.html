@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>It's All Questionable</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <a href="highscores.html">View Highscores</a>
-      <p id="timer">Time: <span id="secondsLeft"> 0</span></p>
+        <a href="highscore.html">View Highscores</a>
+        <p id="timer">Time: <span id="seconds"> 0</span></p>
     </header>
-<!-- main page/start quiz -->
+    <!-- main page/start quiz -->
     <div class="start">
-      <h1>Welcome To The Thunder Quiz</h1>
-      <p>
-        Try to answer the following code-related questions within the time frame
-        limit. Keep in mind that incorrect answers will penalize your score/time
-        by 10 seconds!
-      </p>
-      <button type="button" id="startquiz">Start Quiz</button>
+        <h1>Welcome To The Thunder Quiz</h1>
+        <p>Try to answer the following code-related questions within the time frame
+           limit. Keep in mind that incorrect answers will penalize your score/time
+           by 10 seconds!
+        </p>
+        <button type="button" id="startquiz">Start Quiz</button>
     </div>
-<!-- question cards -->
-    <div class="display">
-      <h1 id="question"></h1>
-      <ol class="list">
-        <li class="choices" id="answer1"></li>
-        <li class="choices" id="answer2"></li>
-        <li class="choices" id="answer3"></li>
-        <li class="choices" id="answer4"></li>
-      </ol>
+    <!-- question cards -->
+    <div class="quest">
+        <h1 id="question"></h1>
+        <ol class="list">
+            <li class="choices" id="answer1"></li>
+            <li class="choices" id="answer2"></li>
+            <li class="choices" id="answer3"></li>
+            <li class="choices" id="answer4"></li>
+        </ol>
     </div>
-<!-- you're all done page -->
+    <!-- you're all done page -->
     <div class="alldone">
-      <h1>All done!!!</h1>
-      <p>Your final score is: <span id="score">equal to seconds left</span></p>
-      <form action="highscores.html" method="get">
-        Enter your initials:<input
-          type="text"
-          name="initials"
-          id="initials"
-        /><br /><br />
-        <button
-          type="submit"
-          onclick="window.location.href = 'highscores.html'"
-          id="highscores"
-        >
-          Submit
-        </button>
-      </form>
+        <h1>All done!!!</h1>
+        <p>Your final score is: <span id="score">equal to seconds left</span></p>
+        <form action="highscores.html" method="get">
+            Enter your initials:<input type="text" name="initials" id="initials" /><br /><br />
+            <button type="submit" onclick="window.location.href = 'highscore.html'" id="highscores">
+                Submit
+            </button>
+        </form>
     </div>
 
-    <script src="javascript/questions.js"></script>
+
     <script src="code.js"></script>
 
     <script></script>
-  </body>
+</body>
+
 </html>

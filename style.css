@@ -1,32 +1,54 @@
-/* /* .card {
-    margin-left: 220px;
-    margin-right: 220px;
-    width: ;
-} */
-
-/* .inputGroup {
-    margin-left: 200px;
-    margin-right: 200px;
-
-} */
-
-/* .button {  */
-    /* float: right; */
-/* } */
-
-.container4 {
-    margin: 80px 80px 80px 80px;
-}
-
-#card {
+/* color and margin for the body of both html pages */
+body {
+    margin: 0;
+    padding: 10px;
+    color: #1f1d1e;
+  }
+  /* font-size for both headers */
+  header {
+    font-size: 30px;
+  }
+  /* centering of all divs */
+  div {
+    margin: auto;
+    width: 50%;
     text-align: center;
-}
- 
-.questions {
-    visibility: hidden;
-    
-}
-
-.AllDone {
-    visibility: hidden;
-}
+  }
+  /* color for attributes */
+  a {
+    text-decoration: none;
+    color: #1f1d1e;
+  }
+  /* list of answers */
+  li {
+    list-style-position: inside;
+    background-color: #f0eeef;
+    width: 25%;
+    font-weight: bold;
+    margin: 5px;
+  }
+  /*timer in the right hand corner  */
+  #timer {
+    float: right;
+    margin: 0;
+  }
+  /* highscores */
+  #display {
+    text-align: left;
+  }
+  /* question card */
+  .quest {
+    text-align: justify;
+  }
+  /* all buttons */
+  button {
+    background-color: rgb(162, 162, 233);
+    border-style: solid;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #1f1d1e;
+  }
+  /* color when hovering over buttons */
+  button:hover {
+    background-color: #d3d1d2;
+  }
