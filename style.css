@@ -1,4 +1,4 @@
-/* .card {
+/* /* .card {
     margin-left: 220px;
     margin-right: 220px;
     width: ;
@@ -10,6 +10,23 @@
 
 } */
 
-.btn {
-    float: right;
+/* .button {  */
+    /* float: right; */
+/* } */
+
+.container4 {
+    margin: 80px 80px 80px 80px;
+}
+
+#card {
+    text-align: center;
+}
+ 
+.questions {
+    visibility: hidden;
+    
+}
+
+.AllDone {
+    visibility: hidden;
 }
