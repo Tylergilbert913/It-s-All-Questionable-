@@ -1,140 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>It's All Questionable</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!--navbar for the entire project  -->
-    <nav class="navbar navbar-expand-md mb-4">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="highscore.html">View Highscores</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">Time Remaining:<span
-                        id="timeLeft"></span></a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- main page  -->
-    <div id="card">
-        <div class="card-body">
-            <h4 class="card-title">Welcome To The Thunder Quiz</h4>
-            <p class="card-text">Try to answer the following code related questions within the time limit. Keep in mind
-                the incorrect answer will penalize your score/time by ten seconds.</p>
-            <button class="btn btn-primary" id="startbtn" data-toggle="hidden">Let's Play, Playa</button>
-        </div>
+  </head>
+  <body>
+    <header>
+      <a href="highscores.html">View Highscores</a>
+      <p id="timer">Time: <span id="secondsLeft"> 0</span></p>
+    </header>
+<!-- main page/start quiz -->
+    <div class="start">
+      <h1>Welcome To The Thunder Quiz</h1>
+      <p>
+        Try to answer the following code-related questions within the time frame
+        limit. Keep in mind that incorrect answers will penalize your score/time
+        by 10 seconds!
+      </p>
+      <button type="button" id="startquiz">Start Quiz</button>
+    </div>
+<!-- question cards -->
+    <div class="dispq">
+      <h1 id="question"></h1>
+      <ol class="list">
+        <li class="choices" id="answer1"></li>
+        <li class="choices" id="answer2"></li>
+        <li class="choices" id="answer3"></li>
+        <li class="choices" id="answer4"></li>
+      </ol>
+    </div>
+<!-- you're all done page -->
+    <div class="alldone">
+      <h1>All done!!!</h1>
+      <p>Your final score is: <span id="score">equal to seconds left</span></p>
+      <form action="highscores.html" method="get">
+        Enter your initials:<input
+          type="text"
+          name="initials"
+          id="initials"
+        /><br /><br />
+        <button
+          type="submit"
+          onclick="window.location.href = 'highscores.html'"
+          id="highscores"
+        >
+          Submit
+        </button>
+      </form>
     </div>
 
+    
 
-    <!-- questions and answers page -->
-
-    <main id="container1" class="questions">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 id="questions1" class="card-title">Which is the correct way to write a boolean?</h5>
-                        <button id="answer" type="button" class="answerBtn btn-primary d-block mb-1">var itsMe = "Get to the chopper!";</button>
-                        <button id="answer" type="button" class="answerBtn btn-primary d-block mb-1">var itsMe = 76;</button>
-                        <button id="answer" type="button" class="answerBtn btn-primary d-block mb-1">var itsMe =
-                            true;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3"></div>
-        </section>
-    </main>
-
-    <main id="container2" class="questions">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 id="questions2" class="card-title">How many units make up a row?</h5>
-                        <button id="answer1" type="button" class="btn btn-primary d-block mb-1">3</button>
-                        <button id="answer1" type="button" class="btn btn-primary d-block mb-1">6</button>
-                        <button id="answer1" type="button" class="btn btn-primary d-block mb-1">9</button>
-                        <button id="answer1" type="button" class="btn btn-primary d-block mb-1">12</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3"></div>
-        </section>
-    </main>
-
-    <main id="container3" class="questions">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 id="questions3" class="card-title">What does HTML stand for?</h5>
-                        <button id="answer2" type="button" class="btn btn-primary d-block mb-1">Hot Tempered Mall
-                            Legends</button>
-                        <button id="answer2" type="button" class="btn btn-primary d-block mb-1">Hypertext Markup
-                            Language</button>
-                        <button id="answer2" type="button" class="btn btn-primary d-block mb-1">Helping Topper Mark
-                            Logs</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3"></div>
-        </section>
-    </main>
-
-    <main id="container4" class="questions">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 id="questions4" class="card-title">What symbol is used to link classes with CSS?</h5>
-                        <button id="answer3" type="button" data-myattribute="false" class="answer btn btn-primary d-block mb-1">@</button>
-                        <button id="answer3" type="button" data-myattribute="false" class="answer btn btn-primary d-block mb-1">#</button>
-                        <button id="answer3" type="button" data-myattribute="true" class="answer btn btn-primary d-block mb-1">.</button>
-                        <button id="answer3" type="button" data-myattribute="false" class="answer btn btn-primary d-block mb-1">*</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3"></div>
-        </section>
-    </main>
-
-
-    <main id="container5">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 id="AllDone" class="card-title">You're All Done!!</h3>
-                        <br>
-                        <h5>Your final score is: </h5>
-                        <br>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Enter Initials"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <span class="btn btn-primary" id="basic-addon2">Submit</span>
-                        </div>
-        </section>
-    </main>
-
-
-    <script src="code.js"></script>
-</body>
-
+    <script></script>
+  </body>
 </html>

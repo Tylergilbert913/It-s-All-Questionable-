@@ -1,51 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>It's All Questionable</title>
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Highscores</title>
+  </head>
+  <body>
+      <!-- highscores pages -->
+    <div>
+      <h1>Highscores</h1>
+      <ol id="display"></ol>
+      <button onclick="window.location.href = 'index.html'">Go Back</button>
+      <button type="reset" id="reset">Reset Highscores</button>
+    </div>
     
-    <main class="highscore">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 id="question4" class="card-title">Highscores</h3>
-                        <br>
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                          </div>
-                        <br>
-                        <div>
-                        <button id="goBack" type="button" class="btn btn-primary">Go Back</button>
-                        <button id="clear" type="button" class="btn btn-primary">Clear Highscores</button>
-                    </div>    
-        </section>
-    </main>
-
-    <main class="highscore1">
-        <section class="row 3">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 id="question4" class="card-title">Highscores</h3>
-                        <br>
-                        <div>
-                        <button type="button" class="btn btn-primary">Go Back</button>
-                        <button type="button" class="btn btn-primary">Clear Highscores</button>
-                    </div>    
-        </section>
-    </main>
-
-    
-
-    <script src="code.js"></script> 
-</body>
+  </body>
 </html>
